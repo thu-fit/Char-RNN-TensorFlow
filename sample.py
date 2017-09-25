@@ -17,7 +17,8 @@ tf.flags.DEFINE_integer('max_length', 30, 'max length to generate')
 
 
 def main(_):
-    FLAGS.start_string = FLAGS.start_string.decode('utf-8')
+    # FLAGS.start_string = FLAGS.start_string.decode('utf-8')
+    FLAGS.start_string = FLAGS.start_string
     converter = TextConverter(filename=FLAGS.converter_path)
     if os.path.isdir(FLAGS.checkpoint_path):
         FLAGS.checkpoint_path =\
